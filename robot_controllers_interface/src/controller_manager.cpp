@@ -29,10 +29,15 @@
 // Author: Michael Ferguson
 
 #include <sstream>
+#include <robot_controllers_interface/gyro_handle.h>
 #include <robot_controllers_interface/controller_manager.h>
 
 namespace robot_controllers
 {
+
+
+using ServerT = actionlib::SimpleActionServer<robot_controllers_msgs::QueryControllerStatesAction>;
+using GyroHandlePtr = boost::shared_ptr<GyroHandle>;
 
 ControllerManager::ControllerManager()
 {

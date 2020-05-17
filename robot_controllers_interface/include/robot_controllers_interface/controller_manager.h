@@ -49,6 +49,7 @@ namespace robot_controllers
 class ControllerManager
 {
   using ServerT = actionlib::SimpleActionServer<robot_controllers_msgs::QueryControllerStatesAction>;
+  using GyroHandlePtr = boost::shared_ptr<GyroHandle>;
 
   using ControllerList = std::vector<ControllerLoaderPtr>;
   using JointHandleList = std::vector<JointHandlePtr> ;

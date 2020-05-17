@@ -368,7 +368,7 @@ void FollowJointTrajectoryController::executeCb(const control_msgs::FollowJointT
 
   Trajectory new_trajectory;
   Trajectory executable_trajectory;
-  goal_time = goal->trajectory.header.stamp;
+  auto goal_time = goal->trajectory.header.stamp;
 
   // Make a trajectory from our message
   if (!trajectoryFromMsg(goal->trajectory, joint_names_, &new_trajectory))
